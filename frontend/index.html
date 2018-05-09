@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Codystar|Open+Sans+Condensed:300" rel="stylesheet">
+
+
+	<!-- <title></title> -->
+	<style>
+		body {
+			background-color: #f1f1f1;
+			padding: 0;
+			margin: 0;
+			font-family: 'Open Sans Condensed', sans-serif;
+
+		}
+		.wrapper {
+			width: 800px;
+			margin: 0 auto;
+			background-color: white;
+			overflow: hidden;
+			padding: 40px;
+		}
+
+		.wrapper h1 {
+			border-bottom: 1px solid black;
+			font-family: 'Codystar', cursive;
+			text-align: center;
+		}
+
+		.buttons {
+			float: right;
+			display: none;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			padding: 5px;
+			margin-bottom: 5px;
+			border: 1px solid #f5f5f5;
+
+			
+		}
+
+		li:hover .buttons {
+			display: block;
+		}
+
+		.finished {
+			background-color: lightyellow;
+
+		}
+
+		button	 {
+			background-color: white;
+			color: blue;
+			border: lightblue;
+			border-radius: 3px;
+		}
+
+		button:hover	 {
+			background-color: blue;
+			color: white;
+			border: lightblue;
+			border-radius: 3px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1>Todos</h1>
+		<h2>Todos:</h2>
+		<div id="Todo-list"></div>
+		<h2>Add a new todo</h2>
+
+		<form onsubmit="addTodo(event)">
+			<label>Todo</label>
+			<input id="Todo-input" />
+			<button type="submit" >Add Todo</button>
+		</form>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyD4cVmhpZ0Ks1srmCgJPhUVP8cXbK3F6iY",
+	    authDomain: "todo-app-62739.firebaseapp.com",
+	    databaseURL: "https://todo-app-62739.firebaseio.com",
+	    projectId: "todo-app-62739",
+	    storageBucket: "todo-app-62739.appspot.com",
+	    messagingSenderId: "46841558013"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script type="text/babel" src="script.js"></script>
+</body>
+</html>

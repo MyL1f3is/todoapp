@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>
+			learn html
+		</title>
+
+		<style>
+			.section {
+				background-color: MistyRose;
+				border: 1px solid black;
+				margin: 1em;
+				padding: 1em;
+				height: 291px;
+				float: left;
+				position: relative;
+
+			}
+			.section-addon{
+				padding: 2em;
+			}
+			.problem {
+				
+				width: 300px;
+			}
+			.explanation {
+				padding: 1em;
+				overflow: hidden;
+				color: firebrick;
+				display: none;
+				position: absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.explanation-visible{
+				display:block;
+			}
+			.show-explanation{
+				position: absolute;
+				top: 0;
+				right: 0;
+				color: white;
+				background-color: rgba(0,0,0,0.5);
+				padding: 3px;
+				cursor: pointer;
+			}
+			img {
+				max-width: 100%;
+				border: 1px solid black;
+			}
+			body{
+				background-image: url(http://www.wettropics.gov.au/site/user-assets/mcms_cb_resized/ktrapnelluppermossmancreek2.jpg);
+			}
+		</style>
+
+		<script>
+			window.showExplanation = function (el, event) {
+				console.log(el)
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="section">
+			<a class="show-explanation" onclick="showExplanation(this, event);">show explanation</a>
+			
+			<div class="problem">
+				<h1>hello world</h1>
+				<h2>hello world</h2>
+			</div>
+
+			<div class="explanation">
+				This is H1 tags.
+			</div>
+		</div>
+
+		<div class="section section-addon">
+			<a class="show-explanation" onclick="showExplanation(this)">show explanation</a>
+
+			<div class="problem">
+				<img src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg">
+			</div>
+
+			<div class="explanation">
+				This is the img tag.
+			</div>
+		</div>
+
+		<div class="section">
+			<a class="show-explanation" onclick="showExplanation(this)">show explanation</a>
+			
+			<div class="problem">
+				<a href="http://google.com">link to google</a>
+			</div>
+
+			<div class="explanation">
+				This is the link to google.
+			</div>
+		</div>
+	</body>
+</html>
